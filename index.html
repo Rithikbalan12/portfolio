@@ -188,54 +188,66 @@
 </nav>
 
 <!-- ═══════════════════════ HERO ═══════════════════════ -->
-<section id="hero" class="relative min-h-screen flex items-center justify-center pt-16">
-    <!-- Ambient blobs -->
-    <div class="absolute top-20 left-10 w-[500px] h-[500px] rounded-full bg-cyan-600/10 blur-[140px]"></div>
-    <div class="absolute bottom-20 right-10 w-[400px] h-[400px] rounded-full bg-emerald-600/10 blur-[120px]"></div>
+<section id="hero" class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-dark">
+    <!-- Right side image with gradient fade -->
+    <div class="absolute inset-y-0 right-0 w-full md:w-[55%] z-0 h-full">
+        <img src="profile.jpg" alt="Rithik B" class="w-full h-full object-cover object-[center_20%]">
+        <!-- Gradient overlay to fade the image into the dark background -->
+        <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/80 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-dark via-transparent to-transparent"></div>
+    </div>
 
-    <div class="relative z-10 flex flex-col items-center text-center px-4 gap-8">
-        <!-- Profile Photo -->
-        <div class="profile-ring">
-            <img src="profile.jpg" alt="Rithik B" class="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-dark">
-        </div>
+    <!-- Ambient blob -->
+    <div class="absolute top-20 left-10 w-[500px] h-[500px] rounded-full bg-cyan-600/10 blur-[140px] z-0 pointer-events-none"></div>
 
-        <div>
-            <p class="text-sm uppercase tracking-[0.3em] text-cyan-400 mb-3 font-medium">Welcome to my portfolio</p>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
-                Hi, I'm <span class="gradient-text">RITHIK B</span>
+    <div class="max-w-7xl mx-auto px-5 w-full relative z-10 grid md:grid-cols-2 items-center">
+        <!-- Left content -->
+        <div class="flex flex-col items-start text-left gap-4 py-20 md:py-0">
+            <p class="text-lg text-white font-medium">Hello, I'm</p>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight uppercase">
+                Rithik <span class="text-cyan-400">B</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 h-8">
-                <span id="typed"></span><span class="typed-cursor">&nbsp;</span>
+            
+            <div class="flex items-center gap-2 mt-2">
+                <p class="text-sm md:text-base text-gray-300 uppercase tracking-widest font-semibold">Fusing code & intelligence as a </p>
+                <span class="bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 px-3 py-1 rounded-md text-sm font-semibold whitespace-nowrap overflow-hidden pr-1 inline-flex items-center">
+                    <span id="typed"></span><span class="typed-cursor">&nbsp;</span>
+                </span>
+            </div>
+
+            <p class="text-sm md:text-base text-gray-400 mt-4 leading-relaxed max-w-lg">
+                Computer Science and AI student passionate about designing intelligent systems that solve real-world challenges. Specializing in Python, Data Science, and scalable backend engineering. I transform complex ideas into innovative, efficient, and impactful solutions through continuous learning and strategic thinking.
             </p>
-        </div>
 
-        <!-- CTA buttons -->
-        <div class="flex flex-wrap justify-center gap-4 mt-4">
-            <a href="#hire" class="px-7 py-3 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 text-dark font-semibold hover:scale-105 transition-transform shadow-lg shadow-cyan-500/20">
-                <i class="fas fa-paper-plane mr-2"></i>Hire Me
-            </a>
-            <a href="#" class="px-7 py-3 rounded-full border border-gray-600 text-white font-semibold hover:bg-white/5 transition-colors">
-                <i class="fas fa-download mr-2"></i>Download CV
-            </a>
-        </div>
+            <!-- CTA buttons -->
+            <div class="flex flex-wrap items-center gap-4 mt-6">
+                <a href="#" class="px-6 py-2.5 rounded-lg bg-cyan-500 text-dark font-bold hover:bg-cyan-400 transition-colors flex items-center gap-2 text-sm shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+                    VIEW RESUME <i class="fas fa-external-link-alt text-xs"></i>
+                </a>
+                <a href="#contact" class="px-6 py-2.5 rounded-lg border border-gray-600 text-white font-semibold hover:bg-white/10 transition-colors flex items-center gap-2 text-sm">
+                    CONTACT ME <i class="fas fa-envelope text-xs"></i>
+                </a>
+            </div>
 
-        <!-- Social icons -->
-        <div class="flex gap-5 mt-2">
-            <a href="https://linkedin.com/in/rithik-b-b3a676321" target="_blank" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 transition-all hover:scale-110">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://github.com/rithikbalan12" target="_blank" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 transition-all hover:scale-110">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="mailto:rithikb0830@gmail.com" class="w-11 h-11 flex items-center justify-center rounded-full border border-gray-700 text-gray-400 hover:text-cyan-400 hover:border-cyan-400 transition-all hover:scale-110">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
+            <!-- Social icons -->
+            <div class="flex gap-4 mt-8">
+                <a href="https://github.com/rithikbalan12" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors text-lg"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/rithik-b-b3a676321" target="_blank" class="text-gray-400 hover:text-cyan-400 transition-colors text-lg"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:rithikb0830@gmail.com" class="text-gray-400 hover:text-cyan-400 transition-colors text-lg"><i class="fas fa-envelope"></i></a>
+            </div>
 
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-10 animate-bounce text-gray-500">
-            <i class="fas fa-chevron-down text-xl"></i>
+            <!-- Tech stack mini-bar -->
+            <div class="flex items-center gap-6 mt-8 border border-white/10 rounded-full px-6 py-3 bg-white/5 backdrop-blur-sm overflow-x-auto max-w-full no-scrollbar">
+                <span class="text-xs text-gray-400 flex items-center gap-1.5"><i class="fab fa-python"></i> Python</span>
+                <span class="text-xs text-gray-400 flex items-center gap-1.5"><i class="fas fa-database"></i> SQL</span>
+                <span class="text-xs text-gray-400 flex items-center gap-1.5"><i class="fab fa-html5"></i> HTML/CSS</span>
+                <span class="text-xs text-gray-400 flex items-center gap-1.5"><i class="fab fa-js"></i> JS</span>
+            </div>
         </div>
+        
+        <!-- Right side is empty block to force left side spacing -->
+        <div class="hidden md:block"></div>
     </div>
 </section>
 
