@@ -192,9 +192,8 @@
     <!-- Right side image with gradient fade -->
     <div class="absolute inset-y-0 right-0 w-full md:w-1/2 z-0 h-full">
         <img src="profile.jpg" alt="Rithik B" class="w-full h-full object-cover object-center">
-        <!-- Softer Gradient overlay so the image is clearer -->
-        <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/40 to-transparent"></div>
-        <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-dark to-transparent"></div>
+        <!-- Only a fade on the very left edge to blend with the dark background -->
+        <div class="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-dark to-transparent"></div>
     </div>
 
     <!-- Ambient blob -->
